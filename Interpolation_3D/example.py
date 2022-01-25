@@ -27,7 +27,7 @@ Z = np.array([[7.894736842105264, 7.894736842105264, 7.894736842105264, 8.947368
 if __name__ == "__main__":
     mon_interpolateur = Interpolator(matrix=z_data)
     # With color gradient (unique plot)
-    f1 = mon_interpolateur.graph_3D_color(display=False)
+    f1 = mon_interpolateur.graph_3D_color(display=False)  # display=True to juste plot this figure
 
     # With lines (unique plot)
     f2 = mon_interpolateur.graph_3D_line(display=False)
