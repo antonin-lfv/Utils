@@ -10,6 +10,9 @@ __pycache__/
 temp-plot.html
 Interpolation_3D/temp-plot.html
 
+# test
+test.py
+
 # Distribution / packaging
 .Python
 build/

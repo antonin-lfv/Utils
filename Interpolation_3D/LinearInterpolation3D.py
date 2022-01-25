@@ -2,7 +2,6 @@
 import numpy as np
 import plotly.graph_objects as go
 from plotly.offline import plot
-import plotly.figure_factory as ff
 import pandas as pd
 from plotly.subplots import make_subplots
 
