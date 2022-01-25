@@ -1,6 +1,4 @@
 """ Usage example """
-import matplotlib.pyplot as plt
-
 from Interpolation_3D.LinearInterpolation3D import *
 import pandas as pd
 z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv')
