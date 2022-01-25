@@ -25,10 +25,13 @@ Z = np.array([[7.894736842105264, 7.894736842105264, 7.894736842105264, 8.947368
                3.6842105263157894, 5.789473684210527, 5.789473684210527, 6.842105263157896, 7.894736842105264, 7.9]])
 
 if __name__ == "__main__":
-    mon_interpolateur = Interpolator(matrix=z_data.values)
-    # With color gradient
-    f1 = mon_interpolateur.graph_3D_color()
-    # With lines
-    f2 = mon_interpolateur.graph_3D_line()
-    # Plot the 2 fig
-    plt.show()
+    mon_interpolateur = Interpolator(matrix=z_data)
+    # With color gradient (unique plot)
+    f1 = mon_interpolateur.graph_3D_color(display=False)
+
+    # With lines (unique plot)
+    f2 = mon_interpolateur.graph_3D_line(display=False)
+
+    # Subplot with gradient and lines
+    mon_interpolateur.subplot_line_gradient()
+
