@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# plotly fig
+temp-plot.html
+Interpolation_3D/temp-plot.html
+
 # Distribution / packaging
 .Python
 build/
