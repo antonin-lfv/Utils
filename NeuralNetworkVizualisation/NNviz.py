@@ -11,7 +11,7 @@ class VizNN:
         self.nb_layers = len(self.model.layers)
         self.neurons_per_layer = [self.model.layers[i].get_config()['units'] for i in range(self.nb_layers)]
 
-    def create_neurons(self, nb_neurons):
+    def _create_neurons(self, nb_neurons):
         """
         :param nb_neurons: amount of neuron in this layer
         :return: y position of the layer's neurons in the plot
@@ -23,7 +23,7 @@ class VizNN:
             nodey += list(range(1, int((nb_neurons - 1) / 2))) + [0] + list(range(-1, int(-((nb_neurons - 1) / 2)), -1))
         return nodey
 
-    def create_edges(self, neurons):
+    def _create_edges(self, neurons):
         """
         :param neurons: position of all the neurons of the network
         :return: edges between the neurons for the plot
@@ -36,7 +36,7 @@ class VizNN:
                     edgey.extend([j, k, None])
         return edgex, edgey
 
-    def create_nodes_list(self, neurons):
+    def _create_nodes_list(self, neurons):
         """
         :param neurons: position of all the neurons of the network
         :return: nodes lists for plot
@@ -53,10 +53,10 @@ class VizNN:
         """
         dict_neurons = {}
         for i in range(self.nb_layers):
-            dict_neurons[i] = self.create_neurons(self.neurons_per_layer[i])
+            dict_neurons[i] = self._create_neurons(self.neurons_per_layer[i])
 
-        node_x, node_y = self.create_nodes_list(dict_neurons)
-        edge_x, edge_y = self.create_edges(dict_neurons)
+        node_x, node_y = self._create_nodes_list(dict_neurons)
+        edge_x, edge_y = self._create_edges(dict_neurons)
 
         edge_trace = go.Scatter(
             x=edge_x, y=edge_y,
