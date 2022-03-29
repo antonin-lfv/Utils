@@ -21,3 +21,4 @@ if __name__ == "__main__":
 
     # Subplot with gradient and lines
     mon_interpolateur.subplot_line_gradient()
+
