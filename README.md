@@ -74,7 +74,7 @@ MyFirstNN.plot_NN()
 <br>
 
 <p align="center">
-<img width="1383" alt="Capture d’écran 2022-03-30 à 11 01 38" src="https://user-images.githubusercontent.com/63207451/160793963-99fd212e-cdef-4788-8473-0d70159c9b66.png">
+<img width="1352" alt="Capture d’écran 2022-03-30 à 11 02 32" src="https://user-images.githubusercontent.com/63207451/160794108-a0619606-0d19-44d3-85b6-ad8457a3336d.png">
   <p/>
 
 <br>
