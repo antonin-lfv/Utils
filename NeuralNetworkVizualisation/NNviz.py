@@ -7,6 +7,9 @@ from tensorflow.keras.layers import Dense
 class VizNN:
 
     def __init__(self, model):
+        """
+        :param model: tensorflow model
+        """
         self.model = model
         self.nb_layers = len(self.model.layers)
         self.neurons_per_layer = [self.model.layers[i].get_config()['units'] for i in range(self.nb_layers)]
@@ -16,7 +19,7 @@ class VizNN:
         :param nb_neurons: amount of neuron in this layer
         :return: y position of the layer's neurons in the plot
         """
-        nodey, step = [], 1
+        nodey = []
         if nb_neurons % 2 == 0:
             nodey += list(range(1, int(nb_neurons / 2) + 1)) + list(range(-1, int(-(nb_neurons / 2)) - 1, -1))
         else:
@@ -72,8 +75,8 @@ class VizNN:
             hoverinfo='none',
             marker=dict(
                 color='#33C4E7',
-                size=10,
-                line_width=1.5))
+                size=15,
+                line_width=0.5))
 
         fig = go.Figure(data=[edge_trace, node_trace],
                         layout=go.Layout(
