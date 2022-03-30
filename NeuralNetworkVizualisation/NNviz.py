@@ -61,7 +61,7 @@ class VizNN:
         # links
         edge_trace = go.Scatter(
             x=edge_x, y=edge_y,
-            line=dict(width=0.1, color='#000000'),
+            line=dict(width=0.5, color='#000000'),
             hoverinfo='none',
             mode='lines')
 
@@ -90,11 +90,10 @@ class VizNN:
 
         # activation label
         minimum_y_neuron = min([min(dict_neurons[i]) for i in range(self.nb_layers)])
-        span_neuron_activation = abs(minimum_y_neuron*1.1 - minimum_y_neuron)
-        print(span_neuron_activation)
+        space_neuron_activation = abs(minimum_y_neuron*1.1 - minimum_y_neuron)
         for i, j in enumerate(self.model.get_config()['layers']):
             activation = j['config']['activation']
-            fig.add_annotation(x=i, y=min(dict_neurons[i])-span_neuron_activation,
+            fig.add_annotation(x=i, y=min(dict_neurons[i])-space_neuron_activation,
                                text=f'{activation}',
                                showarrow=False,
                                yshift=-1)
