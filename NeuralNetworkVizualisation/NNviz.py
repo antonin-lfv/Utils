@@ -16,11 +16,11 @@ class VizNN:
         :param nb_neurons: amount of neuron in this layer
         :return: y position of the layer's neurons in the plot
         """
-        nodey = []
+        nodey, step = [], 1
         if nb_neurons % 2 == 0:
             nodey += list(range(1, int(nb_neurons / 2) + 1)) + list(range(-1, int(-(nb_neurons / 2)) - 1, -1))
         else:
-            nodey += list(range(1, int((nb_neurons - 1) / 2))) + [0] + list(range(-1, int(-((nb_neurons - 1) / 2)), -1))
+            nodey += list(range(1, int((nb_neurons - 1) / 2) + 1)) + [0] + list(range(-1, int(-((nb_neurons - 1) / 2)) - 1, -1))
         return nodey
 
     def _create_edges(self, neurons):
@@ -58,19 +58,21 @@ class VizNN:
         node_x, node_y = self._create_nodes_list(dict_neurons)
         edge_x, edge_y = self._create_edges(dict_neurons)
 
+        # links
         edge_trace = go.Scatter(
             x=edge_x, y=edge_y,
-            line=dict(width=1, color='#000000'),
+            line=dict(width=0.1, color='#000000'),
             hoverinfo='none',
             mode='lines')
 
+        # neurons
         node_trace = go.Scatter(
             x=node_x, y=node_y,
             mode='markers',
-            hoverinfo='text',
+            hoverinfo='none',
             marker=dict(
                 color='#33C4E7',
-                size=20,
+                size=10,
                 line_width=1.5))
 
         fig = go.Figure(data=[edge_trace, node_trace],
@@ -81,6 +83,20 @@ class VizNN:
                             margin=dict(b=20, l=5, r=5, t=40),
                             xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                             yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                            paper_bgcolor='rgba(0,0,0,0)',
+                            plot_bgcolor='rgba(0,0,0,0)',
                         )
                         )
+
+        # activation label
+        minimum_y_neuron = min([min(dict_neurons[i]) for i in range(self.nb_layers)])
+        span_neuron_activation = abs(minimum_y_neuron*1.1 - minimum_y_neuron)
+        print(span_neuron_activation)
+        for i, j in enumerate(self.model.get_config()['layers']):
+            activation = j['config']['activation']
+            fig.add_annotation(x=i, y=min(dict_neurons[i])-span_neuron_activation,
+                               text=f'{activation}',
+                               showarrow=False,
+                               yshift=-1)
+
         plot(fig)

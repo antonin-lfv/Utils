@@ -12,7 +12,7 @@ z_data_2 = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master
 z_data_3 = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/line_3d_dataset.csv')
 
 if __name__ == "__main__":
-    mon_interpolateur = Interpolator(matrix=m3)
+    mon_interpolateur = Interpolator(matrix=z_data_1)
     # With color gradient (unique plot)
     f1 = mon_interpolateur.graph_3D_color(display=False)  # display=True to juste plot this figure
 
