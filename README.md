@@ -16,6 +16,8 @@ m = np.fromfunction(lambda x, y: np.sqrt(x**2+y**2), (15, 30))
 MyInterp = Interpolator(matrix=m)
 ```
 
+<br>
+
 ```py
 # With color gradient (unique plot)
 MyInterp.graph_3D_color(display=True)  # display=True to juste plot this figure
@@ -23,6 +25,8 @@ MyInterp.graph_3D_color(display=True)  # display=True to juste plot this figure
 <p align="center">
 <img width="1296" alt="Capture d’écran 2022-03-29 à 21 43 32" src="https://user-images.githubusercontent.com/63207451/160694388-3b37ea93-064b-4d68-ba09-bc84802cf319.png">
   <p/>
+
+<br>
 
 ```py
 # With lines (unique plot)
@@ -33,6 +37,7 @@ MyInterp.graph_3D_line(display=True)
 <img width="862" alt="Capture d’écran 2022-03-29 à 21 39 50" src="https://user-images.githubusercontent.com/63207451/160693810-e26f25df-d6cb-4434-b9e3-955eb766625e.png">
   <p/>
   
+<br>
 
 ```py
 # Subplot with gradient and lines
@@ -44,6 +49,8 @@ MyInterp.subplot_line_gradient()
   <p/>
   
 If Display is False, then the function will return the plotly.fig object
+
+<br>
 
 # Neural Network Vizualisation
 
@@ -63,6 +70,8 @@ model.add(Dense(1))
 MyFirstNN = VizNN(model)
 MyFirstNN.plot_NN()
 ```
+
+<br>
 
 <p align="center">
 <img width="1390" alt="Capture d’écran 2022-03-29 à 21 31 21" src="https://user-images.githubusercontent.com/63207451/160692553-f7931493-fc5a-47e9-be17-585574785d98.png">
