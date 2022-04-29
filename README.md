@@ -4,6 +4,9 @@
 
 1. [3D linear interpolation](#3d-linear-interpolation)
 2. [Neural Network Vizualisation](#neural-network-vizualisation)
+3. [Graph plot with Plotly](#graph-plot-with-plotly)
+   1. [2D plot](#2d-plot)
+   2. [3D plot](#3d-plot)
 
 <br>
 
@@ -76,6 +79,53 @@ MyFirstNN.plot_NN()
 <p align="center">
 <img width="1352" alt="Capture d’écran 2022-03-30 à 11 02 32" src="https://user-images.githubusercontent.com/63207451/160794108-a0619606-0d19-44d3-85b6-ad8457a3336d.png">
   <p/>
+
+<br>
+
+# Graph plot with Plotly
+
+## 2D plot
+
+To plot your graph, just fill the csv file (aretes_2D, noeuds_2D) with your data, then :
+
+```python
+from PlotGraph.D2Graph.D2GraphPlot import *
+
+# Data
+node_csv_2d = pd.read_csv('data/noeuds_2D.csv', sep=';')
+edge_csv_2d = pd.read_csv('data/aretes_2D.csv', sep=';')
+# Plot
+fig_2D = graphe_2d(nodes=node_csv_2d, edges=edge_csv_2d, titre="myTitle")
+plot(fig_2D)
+```
+
+<p align="center">
+<img width="1395" alt="Capture d’écran 2022-04-29 à 10 33 51" src="https://user-images.githubusercontent.com/63207451/165910921-6e66ee06-13ec-4529-bfd8-c33844780103.png">  
+  </p>
+
+<br>
+
+<br>
+
+## 3D plot
+
+To plot your graph, just fill the csv file (aretes_3D, noeuds_3D) with your data, then :
+
+```python
+from PlotGraph.D3Graph.D3GraphPlot import *
+
+# Data
+node_csv_3D = pd.read_csv('data/neouds_3D.csv', sep=';')
+edge_csv_3D = pd.read_csv('data/aretes_3D.csv', sep=';')
+# Plot
+fig_3D = graphe_3d(nodes=node_csv_3D, edges=edge_csv_3D)
+plot(fig_3D)
+```
+
+<p align="center">
+<img width="1201" alt="Capture d’écran 2022-04-29 à 10 34 59" src="https://user-images.githubusercontent.com/63207451/165911079-2b334274-f548-4545-a4b6-8b4520572a41.png">
+</p>
+
 
 <br>
 

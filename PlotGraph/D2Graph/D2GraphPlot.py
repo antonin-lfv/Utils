@@ -11,34 +11,12 @@ from plotly.offline import plot
 import pandas as pd
 
 
-def is_sublist(l, s):
-    """If s is a sublist of l"""
-    sub_set = False
-    if not s:
-        sub_set = True
-    elif s == l:
-        sub_set = True
-    elif len(s) > len(l):
-        sub_set = False
-    else:
-        for i in range(len(l)):
-            if l[i] == s[0]:
-                n = 1
-                if i + n < len(l):
-                    while (n < len(s)) and (l[i + n] == s[n]):
-                        n += 1
-
-                    if n == len(s):
-                        sub_set = True
-    return sub_set
-
-
 def search_node_from_coord(x, y, nodes):
     """Get node's number from coordinates"""
     return int(nodes.loc[(nodes['x'] == x) & (nodes['y'] == y)]['n'])
 
 
-def graphe_2d(nodes, edges, dijkstra_path, titre):
+def graphe_2d(nodes, edges, titre):
     """Plot graph - with dijkstra path if not none"""
     edge_x_temp, edge_y_temp = [], []
     edge_x, edge_y = [], []
@@ -65,43 +43,23 @@ def graphe_2d(nodes, edges, dijkstra_path, titre):
 
     # Edges (Arrow)
     for i in range(0, len(edge_x), 3):
-        if dijkstra_path and is_sublist(dijkstra_path, list([search_node_from_coord(edge_x[i], edge_y[i], nodes),
-                                                             search_node_from_coord(edge_x[i + 1], edge_y[i + 1],
-                                                                                    nodes)])):
-            fig.add_annotation(
-                ax=edge_x[i],  # départ
-                ay=edge_y[i],  # départ
-                x=edge_x[i + 1],  # arrivée
-                y=edge_y[i + 1],  # arrivée
-                xref='x',
-                yref='y',
-                axref='x',
-                ayref='y',
-                text='',  # if you want only the arrow
-                showarrow=True,
-                arrowhead=3,
-                arrowsize=1,
-                arrowwidth=2,
-                arrowcolor='black',
-            )
-        else:
-            fig.add_annotation(
-                ax=edge_x[i],  # départ
-                ay=edge_y[i],  # départ
-                x=edge_x[i + 1],  # arrivée
-                y=edge_y[i + 1],  # arrivée
-                xref='x',
-                yref='y',
-                axref='x',
-                ayref='y',
-                text='',  # if you want only the arrow
-                showarrow=True,
-                arrowhead=3,
-                arrowsize=1,
-                arrowwidth=1,
-                arrowcolor='grey',
-                opacity=0.3
-            )
+        fig.add_annotation(
+            ax=edge_x[i],  # départ
+            ay=edge_y[i],  # départ
+            x=edge_x[i + 1],  # arrivée
+            y=edge_y[i + 1],  # arrivée
+            xref='x',
+            yref='y',
+            axref='x',
+            ayref='y',
+            text='',  # if you want only the arrow
+            showarrow=True,
+            arrowhead=3,
+            arrowsize=1,
+            arrowwidth=1,
+            arrowcolor='grey',
+            opacity=0.3
+        )
 
     node_x, node_y, num_node = nodes['x'].to_list(), nodes['y'].to_list(), nodes['n'].to_list()
 
