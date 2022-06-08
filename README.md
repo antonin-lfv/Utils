@@ -123,7 +123,7 @@ plot(fig_3D)
 ```
 
 <p align="center">
-<img width="1201" alt="Capture d’écran 2022-04-29 à 10 34 59" src="https://user-images.githubusercontent.com/63207451/165911079-2b334274-f548-4545-a4b6-8b4520572a41.png">
+<img width="1005" alt="Capture d’écran 2022-06-08 à 21 13 20" src="https://user-images.githubusercontent.com/63207451/172698309-715d6df6-2ddb-4c8c-9db7-5cb01bc53d85.png">
 </p>
 
 
