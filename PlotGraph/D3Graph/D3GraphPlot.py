@@ -82,8 +82,7 @@ def graphe_3d(nodes, edges, showEdges=True):
                         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                         autosize=True,
-                        width=1200, height=650,
-                        margin=dict(l=40, r=50, b=40, t=40),
+                        margin=dict(r=50),
                     )
                     )
 
