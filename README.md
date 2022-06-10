@@ -78,6 +78,29 @@ If Display is False, then the function will return the plotly.fig object
 
 <br>
 
+With a numpy matrix, you can recreate the surface
+
+```py
+from Interpolations.Bezier_interpolation_3D.BezierInterpolation3D import *
+import pandas as pd
+import numpy as np
+
+# real data
+z_data_1 = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv',
+                       nrows=10)
+
+
+if __name__ == "__main__":
+    model = BezierInterpolation(matrix=np.array(z_data_1))
+    model.show_bezier()
+```
+
+<p align="center">
+<img width="817" alt="Capture d’écran 2022-06-10 à 22 46 31" src="https://user-images.githubusercontent.com/63207451/173149569-511ee4a0-6327-4e64-9682-27ac5035aa88.png">
+  <p/>
+
+<br>
+
 # Bezier curves
 
 <br>
@@ -86,7 +109,46 @@ If Display is False, then the function will return the plotly.fig object
 
 <br>
 
+With the list of lists of all points
+
+```py
+from plotly.offline import plot
+from BezierCurves.Bezier_curves_2D.BezierCurves2D import *
+
+if __name__ == "__main__":
+    Points_control = [[2, 1], [4, 7], [5, 7], [8, 4], [10, 8], [13, 15]]
+    model = Bezier_2d(points_control=Points_control)
+    x_b, y_b, fig_b = model.show_bezier()
+    plot(fig_b)
+```
+
+<p align="center">
+<img width="1345" alt="Capture d’écran 2022-06-10 à 22 50 20" src="https://user-images.githubusercontent.com/63207451/173150090-bb1e37d8-0727-4596-b234-c7f97cef9d0a.png">
+  <p/>
+
+<br>
+
 ## 3D Bezier curves
+
+<br>
+
+With the list of lists of all points
+
+```py
+from BezierCurves.Bezier_curves_3D.BezierCurves3D import *
+from plotly.offline import plot
+from numpy import array as a
+
+if __name__ == "__main__":
+    points_control = a([[0, 0, 0], [1, 4, 2], [2, 2, 4], [2, 1, 0]])
+    model = Bezier_3d(points_control=points_control, show_control_points=True)
+    x_curve, y_curve, z_curve, x_pts, y_pts, z_pts, fig_b = model.show_bezier()
+    plot(fig_b)
+```
+
+<p align="center">
+<img width="1280" alt="Capture d’écran 2022-06-10 à 22 52 14" src="https://user-images.githubusercontent.com/63207451/173150331-3d442905-7b5c-49c9-b1d5-e9210bb1fb9d.png">
+  <p/>
 
 <br>
 
