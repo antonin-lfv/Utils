@@ -8,7 +8,7 @@ __pycache__/
 
 # plotly fig
 temp-plot.html
-Interpolation_3D/temp-plot.html
+Interpolations/Linear_interpolation_3D/temp-plot.html
 
 # test
 test.py

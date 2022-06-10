@@ -1,5 +1,5 @@
 """ Usage example """
-from Interpolation_3D.LinearInterpolation3D import *
+from Interpolations.Linear_interpolation_3D.LinearInterpolation3D import *
 import pandas as pd
 import numpy as np
 
