@@ -2,6 +2,10 @@
 
 <br>
 
+# Index
+
+<br>
+
 1. [Interpolations](#Interpolations)
 	1. [3D linear interpolation](#3d-linear-interpolation)
 	2. [3D Bezier interpolation](#3d-Bezier-interpolation)
@@ -12,6 +16,10 @@
 4. [Graph plot with Plotly](#graph-plot-with-plotly)
    1. [2D graph plot](#2d-graph-plot)
    2. [3D graph plot](#3d-graph-plot)
+
+<br>
+
+-----
 
 <br>
 
