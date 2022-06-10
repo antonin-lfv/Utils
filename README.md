@@ -1,13 +1,35 @@
-# Documentation
+<p align="center">
+	<img src="https://user-images.githubusercontent.com/63207451/114284722-45901b80-9a52-11eb-8a0c-e99fc8681436.gif" height="80" width="140">
+	<p/>
+
+<h1 align="center">Documentation</h1>
 
 <br>
 
-1. [3D linear interpolation](#3d-linear-interpolation)
-2. [Neural Network Vizualisation](#neural-network-vizualisation)
+### Index
 
 <br>
 
-# 3D linear interpolation
+1. [Interpolations](#Interpolations)
+	1. [3D linear interpolation](#3d-linear-interpolation)
+	2. [3D Bezier interpolation](#3d-Bezier-interpolation)
+2. [Bezier curves](#Bezier-curves)
+	1. [2D Bezier curves](#2d-Bezier-curves)
+	2. [3D Bezier curves](#3d-Bezier-curves)
+3. [Neural Network Vizualisation](#neural-network-vizualisation)
+4. [Graph plot with Plotly](#graph-plot-with-plotly)
+   1. [2D graph plot](#2d-graph-plot)
+   2. [3D graph plot](#3d-graph-plot)
+
+<br>
+
+<br>
+
+# Interpolations
+
+<br>
+
+## 3D linear interpolation
 
 After creating your object with your matrix, 3 methods are available :
 
@@ -52,6 +74,22 @@ If Display is False, then the function will return the plotly.fig object
 
 <br>
 
+## 3D Bezier interpolation
+
+<br>
+
+# Bezier curves
+
+<br>
+
+## 2D Bezier curves
+
+<br>
+
+## 3D Bezier curves
+
+<br>
+
 # Neural Network Vizualisation
 
 After creating your object with your model, use the method called plot to vizualise your network
@@ -76,6 +114,53 @@ MyFirstNN.plot_NN()
 <p align="center">
 <img width="1352" alt="Capture d’écran 2022-03-30 à 11 02 32" src="https://user-images.githubusercontent.com/63207451/160794108-a0619606-0d19-44d3-85b6-ad8457a3336d.png">
   <p/>
+
+<br>
+
+# Graph plot with Plotly
+
+## 2D graph plot
+
+To plot your graph, just fill the csv file (aretes_2D, noeuds_2D) with your data, then :
+
+```python
+from PlotGraph.D2Graph.D2GraphPlot import *
+
+# Data
+node_csv_2d = pd.read_csv('data/noeuds_2D.csv', sep=';')
+edge_csv_2d = pd.read_csv('data/aretes_2D.csv', sep=';')
+# Plot
+fig_2D = graphe_2d(nodes=node_csv_2d, edges=edge_csv_2d, titre="myTitle")
+plot(fig_2D)
+```
+
+<p align="center">
+<img width="1395" alt="Capture d’écran 2022-04-29 à 10 33 51" src="https://user-images.githubusercontent.com/63207451/165910921-6e66ee06-13ec-4529-bfd8-c33844780103.png">  
+  </p>
+
+<br>
+
+<br>
+
+## 3D graph plot
+
+To plot your graph, just fill the csv file (aretes_3D, noeuds_3D) with your data, then :
+
+```python
+from PlotGraph.D3Graph.D3GraphPlot import *
+
+# Data
+node_csv_3D = pd.read_csv('data/neouds_3D.csv', sep=';')
+edge_csv_3D = pd.read_csv('data/aretes_3D.csv', sep=';')
+# Plot
+fig_3D = graphe_3d(nodes=node_csv_3D, edges=edge_csv_3D)
+plot(fig_3D)
+```
+
+<p align="center">
+<img width="1005" alt="Capture d’écran 2022-06-08 à 21 13 20" src="https://user-images.githubusercontent.com/63207451/172698309-715d6df6-2ddb-4c8c-9db7-5cb01bc53d85.png">
+</p>
+
 
 <br>
 
