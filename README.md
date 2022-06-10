@@ -2,15 +2,24 @@
 
 <br>
 
-1. [3D linear interpolation](#3d-linear-interpolation)
-2. [Neural Network Vizualisation](#neural-network-vizualisation)
-3. [Graph plot with Plotly](#graph-plot-with-plotly)
-   1. [2D plot](#2d-plot)
-   2. [3D plot](#3d-plot)
+1. [Interpolations](#Interpolations)
+	1. [3D linear interpolation](#3d-linear-interpolation)
+	2. [3D Bezier interpolation](#3d-Bezier-interpolation)
+2. [Bezier curves](#Bezier-curves)
+	1. [2D Bezier curves](#2d-Bezier-curves)
+	2. [3D Bezier curves](#3d-Bezier-curves)
+3. [Neural Network Vizualisation](#neural-network-vizualisation)
+4. [Graph plot with Plotly](#graph-plot-with-plotly)
+   1. [2D graph plot](#2d-graph-plot)
+   2. [3D graph plot](#3d-graph-plot)
 
 <br>
 
-# 3D linear interpolation
+# Interpolations
+
+<br>
+
+## 3D linear interpolation
 
 After creating your object with your matrix, 3 methods are available :
 
@@ -55,6 +64,22 @@ If Display is False, then the function will return the plotly.fig object
 
 <br>
 
+## 3D Bezier interpolation
+
+<br>
+
+# Bezier curves
+
+<br>
+
+## 2D Bezier curves
+
+<br>
+
+## 3D Bezier curves
+
+<br>
+
 # Neural Network Vizualisation
 
 After creating your object with your model, use the method called plot to vizualise your network
@@ -84,7 +109,7 @@ MyFirstNN.plot_NN()
 
 # Graph plot with Plotly
 
-## 2D plot
+## 2D graph plot
 
 To plot your graph, just fill the csv file (aretes_2D, noeuds_2D) with your data, then :
 
@@ -107,7 +132,7 @@ plot(fig_2D)
 
 <br>
 
-## 3D plot
+## 3D graph plot
 
 To plot your graph, just fill the csv file (aretes_3D, noeuds_3D) with your data, then :
 
