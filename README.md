@@ -31,6 +31,8 @@
 
 ## 3D linear interpolation
 
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/Interpolations/Linear_interpolation_3D/LinearInterpolation3D.py)
+
 After creating your object with your matrix, 3 methods are available :
 
 ```py
@@ -76,6 +78,8 @@ If Display is False, then the function will return the plotly.fig object
 
 ## 3D Bezier interpolation
 
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/Interpolations/Bezier_interpolation_3D/BezierInterpolation3D.py)
+
 <br>
 
 With a numpy matrix, you can recreate the surface
@@ -107,6 +111,8 @@ if __name__ == "__main__":
 
 ## 2D Bezier curves
 
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/BezierCurves/Bezier_curves_2D/BezierCurves2D.py)
+
 <br>
 
 With the list of lists of all points
@@ -129,6 +135,8 @@ if __name__ == "__main__":
 <br>
 
 ## 3D Bezier curves
+
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/BezierCurves/Bezier_curves_3D/BezierCurves3D.py)
 
 <br>
 
@@ -153,6 +161,8 @@ if __name__ == "__main__":
 <br>
 
 # Neural Network Vizualisation
+
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/NeuralNetworkVizualisation/NNviz.py)
 
 After creating your object with your model, use the method called plot to vizualise your network
 
@@ -183,6 +193,8 @@ MyFirstNN.plot_NN()
 
 ## 2D graph plot
 
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/PlotGraph/D2Graph/D2GraphPlot.py)
+
 To plot your graph, just fill the csv file (aretes_2D, noeuds_2D) with your data, then :
 
 ```python
@@ -205,6 +217,8 @@ plot(fig_2D)
 <br>
 
 ## 3D graph plot
+
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/PlotGraph/D3Graph/D3GraphPlot.py)
 
 To plot your graph, just fill the csv file (aretes_3D, noeuds_3D) with your data, then :
 
