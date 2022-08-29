@@ -8,7 +8,6 @@
 
 ### Index
 
-<br>
 
 1. [Interpolations](#Interpolations)
 	1. [3D linear interpolation](#3d-linear-interpolation)
@@ -80,8 +79,6 @@ If Display is False, then the function will return the plotly.fig object
 
 [🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/Interpolations/Bezier_interpolation_3D/BezierInterpolation3D.py)
 
-<br>
-
 With a numpy matrix, you can recreate the surface
 
 ```py
@@ -113,8 +110,6 @@ if __name__ == "__main__":
 
 [🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/BezierCurves/Bezier_curves_2D/BezierCurves2D.py)
 
-<br>
-
 With the list of lists of all points
 
 ```py
@@ -137,8 +132,6 @@ if __name__ == "__main__":
 ## 3D Bezier curves
 
 [🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/BezierCurves/Bezier_curves_3D/BezierCurves3D.py)
-
-<br>
 
 With the list of lists of all points
 
@@ -190,6 +183,8 @@ MyFirstNN.plot_NN()
 <br>
 
 # Graph plot with Plotly
+
+<br>
 
 ## 2D graph plot
 
