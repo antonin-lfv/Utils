@@ -32,17 +32,15 @@
 
 [🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/Interpolations/Linear_interpolation_3D/LinearInterpolation3D.py)
 
-After creating your object with your matrix, 3 methods are available :
+After creating your object with your matrix (creates with numpy and lambda functions or just with a $ n*m $ numpy matrix), 3 methods are available :
 
 ```py
-m = np.fromfunction(lambda x, y: np.sqrt(x**2+y**2), (15, 30))
 MyInterp = Interpolator(matrix=m)
 ```
 
-<br>
 
 ```py
-# With color gradient (unique plot)
+# 1. With color gradient (unique plot)
 MyInterp.graph_3D_color(display=True)  # display=True to juste plot this figure
 ```
 <p align="center">
@@ -52,7 +50,7 @@ MyInterp.graph_3D_color(display=True)  # display=True to juste plot this figure
 <br>
 
 ```py
-# With lines (unique plot)
+# 2. With lines (unique plot)
 MyInterp.graph_3D_line(display=True)
 ```
 
@@ -63,7 +61,7 @@ MyInterp.graph_3D_line(display=True)
 <br>
 
 ```py
-# Subplot with gradient and lines
+# 3. Subplot with gradient and lines
 MyInterp.subplot_line_gradient()
 ```
 
