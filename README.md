@@ -99,7 +99,6 @@ model.show_bezier()
 
 # Bezier curves
 
-<br>
 
 ## 2D Bezier curves
 
@@ -177,7 +176,6 @@ MyFirstNN.plot_NN()
 
 # Graph plot with Plotly
 
-<br>
 
 ## 2D graph plot
 
