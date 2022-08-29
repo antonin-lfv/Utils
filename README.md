@@ -32,7 +32,7 @@
 
 [🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/Interpolations/Linear_interpolation_3D/LinearInterpolation3D.py)
 
-After creating your object with your matrix (creates with numpy and lambda functions or just with a $ n*m $ numpy matrix), 3 methods are available :
+After creating your object with your matrix (creates with numpy and lambda functions or just with a $n*m$ numpy matrix), 3 methods are available :
 
 ```py
 MyInterp = Interpolator(matrix=m)
