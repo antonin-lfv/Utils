@@ -88,10 +88,8 @@ import numpy as np
 z_data_1 = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv',
                        nrows=10)
 
-
-if __name__ == "__main__":
-    model = BezierInterpolation(matrix=np.array(z_data_1))
-    model.show_bezier()
+model = BezierInterpolation(matrix=np.array(z_data_1))
+model.show_bezier()
 ```
 
 <p align="center">
@@ -114,11 +112,10 @@ With the list of lists of all points
 from plotly.offline import plot
 from BezierCurves.Bezier_curves_2D.BezierCurves2D import *
 
-if __name__ == "__main__":
-    Points_control = [[2, 1], [4, 7], [5, 7], [8, 4], [10, 8], [13, 15]]
-    model = Bezier_2d(points_control=Points_control)
-    x_b, y_b, fig_b = model.show_bezier()
-    plot(fig_b)
+Points_control = [[2, 1], [4, 7], [5, 7], [8, 4], [10, 8], [13, 15]]
+model = Bezier_2d(points_control=Points_control)
+x_b, y_b, fig_b = model.show_bezier()
+plot(fig_b)
 ```
 
 <p align="center">
@@ -138,11 +135,10 @@ from BezierCurves.Bezier_curves_3D.BezierCurves3D import *
 from plotly.offline import plot
 from numpy import array as a
 
-if __name__ == "__main__":
-    points_control = a([[0, 0, 0], [1, 4, 2], [2, 2, 4], [2, 1, 0]])
-    model = Bezier_3d(points_control=points_control, show_control_points=True)
-    x_curve, y_curve, z_curve, x_pts, y_pts, z_pts, fig_b = model.show_bezier()
-    plot(fig_b)
+points_control = a([[0, 0, 0], [1, 4, 2], [2, 2, 4], [2, 1, 0]])
+model = Bezier_3d(points_control=points_control, show_control_points=True)
+x_curve, y_curve, z_curve, x_pts, y_pts, z_pts, fig_b = model.show_bezier()
+plot(fig_b)
 ```
 
 <p align="center">
