@@ -26,7 +26,6 @@
 
 # Interpolations
 
-<br>
 
 ## 3D linear interpolation
 
