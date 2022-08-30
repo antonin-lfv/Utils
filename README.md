@@ -278,14 +278,14 @@ plotPoints(Points)
 **Results** 
 
 <p align="center">
-<img width="1000" alt="Capture d’écran 2022-08-30 à 14 29 19" src="https://user-images.githubusercontent.com/63207451/187437949-f3a39c56-46d1-401d-b7be-3456b306b306.png"></p>
+<img width="600" alt="Capture d’écran 2022-08-30 à 14 29 19" src="https://user-images.githubusercontent.com/63207451/187437949-f3a39c56-46d1-401d-b7be-3456b306b306.png"></p>
 
 <br>
 
 **Proof**
 
 <p align="center">
-<img width="750" alt="Capture d’écran 2022-06-08 à 21 13 20" src="https://user-images.githubusercontent.com/63207451/187437960-3c45cffd-c56f-4945-b818-2480bcd98916.png">
+<img width="600" alt="Capture d’écran 2022-06-08 à 21 13 20" src="https://user-images.githubusercontent.com/63207451/187437960-3c45cffd-c56f-4945-b818-2480bcd98916.png">
 </p>
 
 <br>
