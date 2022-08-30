@@ -8,4 +8,4 @@ Points = [
     [4.894, 2.899113, 4.65457, 0]
 ]
 
-plotGraph(Points)
+plotPoints(Points)

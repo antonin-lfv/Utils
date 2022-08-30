@@ -25,7 +25,7 @@ La cellule de coordonnées (i,j) donne la distance entre le point d'indice i et 
 """
 
 
-def plotGraph(Points):
+def plotPoints(Points):
     fig = go.Figure()
     # Création des points
     points_x = []
