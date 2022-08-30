@@ -35,6 +35,7 @@
 After creating your object with your matrix (creates with numpy and lambda functions or just with a $n*m$ numpy matrix), 3 methods are available :
 
 ```py
+# m is a numpy matrix
 MyInterp = Interpolator(matrix=m)
 ```
 
@@ -229,6 +230,26 @@ plot(fig_3D)
 # Circles intersection
 
 [🔗 code source]()
+
+You just need to put the centers coordinates and the radius of each circles. One list for the x, another one for the y, 
+and a last for the radius. You will obtain the solution of the system of equations allowing to find the intersection 
+of n circles. If the intersection does not exist geometrically, the solution corresponds to the closest point of all circles.
+
+````py
+from CirclesIntersection.CirclesIntersect import *
+import warnings
+warnings.filterwarnings('ignore', 'The iteration is not making good progress')
+
+centres_x = [0, 3, -0.49]
+centres_y = [0, 0, 1.93]
+rayons = [4.89, 2.89, 4.65]
+
+print(solve_inter_circles(centres_x=centres_x, centres_y=centres_y, rayons=rayons))
+````
+
+````bash
+OUT : (4.099264653603768, 2.669805721160483)
+````
 
 <br>
 
