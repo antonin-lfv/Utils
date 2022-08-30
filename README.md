@@ -229,7 +229,7 @@ plot(fig_3D)
 
 # Circles intersection
 
-[🔗 code source]()
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/CirclesIntersection/CirclesIntersect.py)
 
 You just need to put the centers coordinates and the radius of each circles. One list for the x, another one for the y, 
 and a last for the radius. You will obtain the solution of the system of equations allowing to find the intersection 
