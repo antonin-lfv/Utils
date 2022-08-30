@@ -20,7 +20,7 @@
    1. [2D graph plot](#2d-graph-plot)
    2. [3D graph plot](#3d-graph-plot)
 5. [Circles intersection](#circles-intersection) (**New !**)
-6. [Plot N points with distances between](#plot-n-points-with-distances-between)
+6. [Plot N points with distances between](#plot-n-points-with-distances-between) (**New !**)
 
 <br>
 
