@@ -19,6 +19,7 @@
 4. [Graph plot with Plotly](#graph-plot-with-plotly)
    1. [2D graph plot](#2d-graph-plot)
    2. [3D graph plot](#3d-graph-plot)
+5. [Circles intersection](#circles-intersection)
 
 <br>
 
@@ -223,6 +224,11 @@ plot(fig_3D)
 <img width="1005" alt="Capture d’écran 2022-06-08 à 21 13 20" src="https://user-images.githubusercontent.com/63207451/172698309-715d6df6-2ddb-4c8c-9db7-5cb01bc53d85.png">
 </p>
 
+<br>
+
+# Circles intersection
+
+[🔗 code source]()
 
 <br>
 
