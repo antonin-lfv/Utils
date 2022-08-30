@@ -20,6 +20,7 @@
    1. [2D graph plot](#2d-graph-plot)
    2. [3D graph plot](#3d-graph-plot)
 5. [Circles intersection](#circles-intersection) (**New !**)
+6. [Plot N points with distances between](#plot-n-points-with-distances-between)
 
 <br>
 
@@ -250,6 +251,42 @@ print(solve_inter_circles(centres_x=centres_x, centres_y=centres_y, rayons=rayon
 ````bash
 OUT : (4.099264653603768, 2.669805721160483)
 ````
+
+<br>
+
+# Plot N points with distances between
+
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/PlotNpoints/Npoints.py)
+
+If you only know the distance between n points, this code will plot them. (Not the only way to plot them)
+
+````py
+from PlotNpoints.Npoints import *
+
+# symmetrical matrix 
+# The value of coord i,j gives the distance between the ith and the jth points (ordered by index)
+Points = [
+    [0, 3, 2, 4.894],
+    [3, 0, 4, 2.899113],
+    [2, 4, 0, 4.65457],
+    [4.894, 2.899113, 4.65457, 0]
+]
+
+plotGraph(Points)
+````
+
+Results 
+
+<p align="center">
+<img width="1365" alt="Capture d’écran 2022-08-30 à 14 29 19" src="https://user-images.githubusercontent.com/63207451/187437949-f3a39c56-46d1-401d-b7be-3456b306b306.png"></p>
+
+<br>
+
+Proof
+
+<p align="center">
+<img width="1005" alt="Capture d’écran 2022-06-08 à 21 13 20" src="https://user-images.githubusercontent.com/63207451/187437960-3c45cffd-c56f-4945-b818-2480bcd98916.png">
+</p>
 
 <br>
 
