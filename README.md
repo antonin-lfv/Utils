@@ -278,7 +278,7 @@ plotPoints(Points)
 **Results** 
 
 <p align="center">
-<img width="600" alt="Capture d’écran 2022-08-30 à 14 29 19" src="https://user-images.githubusercontent.com/63207451/187437949-f3a39c56-46d1-401d-b7be-3456b306b306.png"></p>
+<img alt="Capture d’écran 2022-08-30 à 14 29 19" src="https://user-images.githubusercontent.com/63207451/187437949-f3a39c56-46d1-401d-b7be-3456b306b306.png"></p>
 
 <br>
 
