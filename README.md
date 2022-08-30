@@ -19,7 +19,7 @@
 4. [Graph plot with Plotly](#graph-plot-with-plotly)
    1. [2D graph plot](#2d-graph-plot)
    2. [3D graph plot](#3d-graph-plot)
-5. [Circles intersection](#circles-intersection)
+5. [Circles intersection](#circles-intersection)(**New !**)
 
 <br>
 
