@@ -35,7 +35,7 @@
 
 After creating your object with your matrix (creates with numpy and lambda functions or just with a $n*m$ numpy matrix), 3 methods are available :
 
-```py
+```python
 # m is a numpy matrix
 MyInterp = Interpolator(matrix=m)
 ```
