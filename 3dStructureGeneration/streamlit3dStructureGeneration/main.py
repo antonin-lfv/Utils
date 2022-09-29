@@ -86,8 +86,8 @@ if st.session_state["node_csv_3D"]:
                              use_container_width=True)
 
 # display data in sidebar
-node_data_show.dataframe(pd.DataFrame(st.session_state["node_csv_3D"], columns=node_columns))
-edge_data_show.dataframe(pd.DataFrame(st.session_state["edge_csv_3D"], columns=edge_columns))
+node_data_show.dataframe(pd.DataFrame(st.session_state["node_csv_3D"], columns=node_columns), use_container_width=True)
+edge_data_show.dataframe(pd.DataFrame(st.session_state["edge_csv_3D"], columns=edge_columns), use_container_width=True)
 
 if st.session_state["node_csv_3D"]:
     button_export_points.download_button(label="Exporter les points en csv",
