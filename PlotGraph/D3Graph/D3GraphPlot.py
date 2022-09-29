@@ -66,8 +66,9 @@ def graphe_3d(nodes, edges, showEdges=True):
 
     node_trace = go.Scatter3d(
         x=node_x, y=node_y, z=node_z,
+        text=nodes['n'].to_list(),
         mode='markers',
-        hovertemplate='(%{x};%{y};%{z})',
+        hovertemplate='(%{x};%{y};%{z})\nIndex: %{text}',
         marker=dict(
             color='black',
             size=5),
