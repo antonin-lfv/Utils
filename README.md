@@ -19,9 +19,9 @@
 4. [Graph plot with Plotly](#graph-plot-with-plotly)
    1. [2D graph plot](#2d-graph-plot)
    2. [3D graph plot](#3d-graph-plot)
-5. [Circles intersection](#circles-intersection) (**New !**)
-6. [Plot N points with distances between](#plot-n-points-with-distances-between) (**New !**)
-7. [3D structure generation wizard](#3d-structure-generation-wizard)
+5. [Circles intersection](#circles-intersection)
+6. [Plot N points with distances between](#plot-n-points-with-distances-between)
+7. [3D structure generation wizard](#3d-structure-generation-wizard) (**New !**)
 
 <br>
 
