@@ -1,26 +1,17 @@
+# Generation page
 import streamlit as st
 from utils.fonctions import *
 
-# Config
-st.set_page_config(
-    layout="wide",
-    page_title="Structure generation",
-    menu_items={
-        'About': "My app made with love"
-    }
-)
+
+st.set_page_config(page_icon="🤖",
+                   layout="wide",
+                   )
 
 
 def convert_df(df):
     # pandas to csv
     return df.to_csv().encode("utf-8")
 
-
-# Layout
-st.title("3D structure generation")
-st.write("###")
-graphe_zone = st.empty()
-col1, col2 = st.columns(2)
 
 # Data
 node_columns = ["n", "x", "y", "z"]
@@ -31,9 +22,10 @@ if "edge_csv_3D" not in st.session_state.keys():
     st.session_state["edge_csv_3D"] = []
 
 # SideBar
-st.sidebar.title("Points")
+st.sidebar.title("Vos données")
+st.sidebar.subheader("Points")
 node_data_show = st.sidebar.empty()
-st.sidebar.title("Edges")
+st.sidebar.subheader("Arêtes")
 edge_data_show = st.sidebar.empty()
 st.sidebar.write("---")
 button_export_points = st.sidebar.empty()
@@ -41,7 +33,19 @@ button_export_edges = st.sidebar.empty()
 export_caption = st.sidebar.empty()
 button_delete = st.sidebar.empty()
 st.sidebar.caption("Pour supprimer les données, appuyer deux fois")
+st.sidebar.write("###")
 
+
+# Layout
+if not st.session_state["node_csv_3D"]:
+    st.info("La structure s'affichera ici après l'ajout de vos données")
+    st.write("###")
+else:
+    st.subheader("Votre structure")
+graphe_zone = st.empty()
+col1, col2 = st.columns(2)
+
+# Forms
 with col1:
     with st.form("Ajouter un point", clear_on_submit=False):
         st.subheader("Ajouter un point")
