@@ -44,4 +44,7 @@ if (points_upload and edges_upload) or points_upload:
 elif edges_upload and not points_upload:
     st.warning("Il faut ajouter des points !")
 else:
+    st.write("###")
+    st.write("###")
+    st.write("###")
     st.info("La structure s'affichera ici après l'ajout de vos données")
