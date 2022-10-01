@@ -32,4 +32,4 @@ st.markdown("<p class='text'>Bienvenue dans l'application de génération de str
             "Ici, vous pouvez générer une structure depuis la page <b>Generation</b>"
             " et exporter les données en csv.</p>",  unsafe_allow_html=True)
 st.markdown("<p class='text'>Vous avez aussi la possibilité d'importer directement les fichiers csv"
-            "pour visualiser vos structures depuis la page <b>Visualisation</b>.</p>",  unsafe_allow_html=True)
+            " pour visualiser vos structures depuis la page <b>Visualisation</b>.</p>",  unsafe_allow_html=True)
