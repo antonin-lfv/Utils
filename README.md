@@ -299,7 +299,7 @@ Open the wizard from [here](https://3dstructuregenerationstreamlit3dstructuregen
 
 <br>
 
-![Capture d’écran 2022-10-01 à 22 09 05](https://user-images.githubusercontent.com/63207451/193426597-00128921-6888-40a0-88c9-6c69eb81d742.png)
+![Capture d’écran 2022-10-01 à 22 09 52](https://user-images.githubusercontent.com/63207451/193426613-65cbcc46-905f-49c3-9fa3-c7fee29bd04b.png)
 
 <br>
 
