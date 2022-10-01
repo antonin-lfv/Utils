@@ -56,7 +56,6 @@ with col1:
 
         submitted = st.form_submit_button("Submit")
         if submitted:
-            # TODO add delete mode
             if index in [st.session_state["node_csv_3D"][i][0] for i in range(len(st.session_state["node_csv_3D"]))]:
                 st.error(f"L'index {index} est déjà utilisé !")
             else:
