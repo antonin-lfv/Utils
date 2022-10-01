@@ -21,6 +21,7 @@
    2. [3D graph plot](#3d-graph-plot)
 5. [Circles intersection](#circles-intersection) (**New !**)
 6. [Plot N points with distances between](#plot-n-points-with-distances-between) (**New !**)
+7. [3D structure generation wizard](#3d-structure-generation-wizard)
 
 <br>
 
@@ -287,6 +288,12 @@ plotPoints(Points)
 <p align="center">
 <img width="600" alt="Capture d’écran 2022-06-08 à 21 13 20" src="https://user-images.githubusercontent.com/63207451/187437960-3c45cffd-c56f-4945-b818-2480bcd98916.png">
 </p>
+
+<br>
+
+# 3D structure generation wizard
+
+Open the wizard from [here](https://3dstructuregenerationstreamlit3dstructuregenerationmai-c7p943.streamlitapp.com) and start creating your 3D structure.
 
 <br>
 
