@@ -297,6 +297,10 @@ Open the wizard from [here](https://3dstructuregenerationstreamlit3dstructuregen
 
 <br>
 
+![Capture d’écran 2022-10-01 à 19 03 45](https://user-images.githubusercontent.com/63207451/193420277-952e3d00-b605-4dd0-8af4-097d956fc0df.png)
+
+<br>
+
 <p align="center">
 	  <a href="https://antonin-lfv.github.io" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/127334786-f48498e4-7aa1-4fbd-b7b4-cd78b43972b8.png" title="Web Page" width="38" height="38"></a>
   <a href="https://github.com/antonin-lfv" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/97302854-e484da80-1859-11eb-9374-5b319ca51197.png" title="GitHub" width="40" height="40"></a>
