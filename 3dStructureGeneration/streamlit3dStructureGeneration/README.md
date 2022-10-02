@@ -1,2 +1,1 @@
-# streamlit_template
-Streamlit application template
+# 3D structure generation
