@@ -295,7 +295,7 @@ plotPoints(Points)
 
 [🔗 code source](https://github.com/antonin-lfv/Utils/tree/main/3dStructureGeneration/streamlit3dStructureGeneration)
 
-Open the wizard from [here](https://3dstructuregenerationstreamlit3dstructuregenerationmai-c7p943.streamlitapp.com) and start creating your 3D structure. You can also import your data, and visualize the generated structure.
+Open the wizard from [here](https://3dstructuregenerationstreamlit3dstructuregenerationhom-q9yptg.streamlitapp.com/) and start creating your 3D structure. You can also import your data, and visualize the generated structure.
 
 <br>
 
