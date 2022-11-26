@@ -15,13 +15,14 @@
 2. [Bezier curves](#Bezier-curves)
 	1. [2D Bezier curves](#2d-Bezier-curves)
 	2. [3D Bezier curves](#3d-Bezier-curves)
-3. [Neural Network Vizualisation](#neural-network-vizualisation)
-4. [Graph plot with Plotly](#graph-plot-with-plotly)
+3. [Keras Network Vizualisation](#keras-network-vizualisation)
+4. [Simple ANN Vizualisation](#simple-ann-vizualisation) (**New !**)
+5. [Graph plot with Plotly](#graph-plot-with-plotly)
    1. [2D graph plot](#2d-graph-plot)
    2. [3D graph plot](#3d-graph-plot)
-5. [Circles intersection](#circles-intersection)
-6. [Plot N points with distances between](#plot-n-points-with-distances-between)
-7. [3D structure generation wizard](#3d-structure-generation-wizard) (**New !**)
+6. [Circles intersection](#circles-intersection)
+7. [Plot N points with distances between](#plot-n-points-with-distances-between)
+8. [3D structure generation wizard](#3d-structure-generation-wizard) (**New !**)
 
 <br>
 
@@ -149,9 +150,9 @@ plot(fig_b)
 
 <br>
 
-# Neural Network Vizualisation
+# Keras Network Vizualisation
 
-[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/NeuralNetworkVizualisation/NNviz.py)
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/KerasNetworkVizualisation/NNviz.py)
 
 After creating your object with your model, use the method called plot to vizualise your network
 
@@ -174,6 +175,27 @@ MyFirstNN.plot_NN()
 
 <p align="center">
 <img width="1352" alt="Capture d’écran 2022-03-30 à 11 02 32" src="https://user-images.githubusercontent.com/63207451/160794108-a0619606-0d19-44d3-85b6-ad8457a3336d.png">
+  <p/>
+
+<br>
+
+# Simple ANN Vizualisation
+
+[🔗 code source](https://github.com/antonin-lfv/Utils/blob/main/SimpleANNVizualisation/ANNVizualisation.py)
+
+Plot a neural network with the number of neurons per layer
+
+```py
+from SimpleANNVizualisation.ANNVizualisation import *
+
+NN = NeuralNetworkPlot(layers_list=[10, 10, 5, 5, 1])
+NN.plot_neural_network()
+```
+
+<br>
+
+<p align="center">
+<img width="1352" alt="ann" src="https://user-images.githubusercontent.com/63207451/204110177-cca6966f-d229-4e78-90b8-1b1677169ca9.png">
   <p/>
 
 <br>
