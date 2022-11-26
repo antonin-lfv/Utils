@@ -1,5 +1,5 @@
 """ Usage example """
-from NeuralNetworkVizualisation.NNviz import *
+from KerasNetworkVizualisation.NNviz import *
 
 if __name__ == '__main__':
     # Model

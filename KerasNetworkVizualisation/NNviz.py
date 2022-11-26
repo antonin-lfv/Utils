@@ -4,6 +4,7 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense
 
+
 class VizNN:
 
     def __init__(self, model):
@@ -23,7 +24,8 @@ class VizNN:
         if nb_neurons % 2 == 0:
             nodey += list(range(1, int(nb_neurons / 2) + 1)) + list(range(-1, int(-(nb_neurons / 2)) - 1, -1))
         else:
-            nodey += list(range(1, int((nb_neurons - 1) / 2) + 1)) + [0] + list(range(-1, int(-((nb_neurons - 1) / 2)) - 1, -1))
+            nodey += list(range(1, int((nb_neurons - 1) / 2) + 1)) + [0] + list(
+                range(-1, int(-((nb_neurons - 1) / 2)) - 1, -1))
         return nodey
 
     def _create_edges(self, neurons):
@@ -93,10 +95,10 @@ class VizNN:
 
         # activation label
         minimum_y_neuron = min([min(dict_neurons[i]) for i in range(self.nb_layers)])
-        space_neuron_activation = abs(minimum_y_neuron*1.1 - minimum_y_neuron)
+        space_neuron_activation = abs(minimum_y_neuron * 1.1 - minimum_y_neuron)
         for i, j in enumerate(self.model.get_config()['layers']):
             activation = j['config']['activation']
-            fig.add_annotation(x=i, y=min(dict_neurons[i])-space_neuron_activation,
+            fig.add_annotation(x=i, y=min(dict_neurons[i]) - space_neuron_activation,
                                text=f'{activation}',
                                showarrow=False,
                                yshift=-1)
