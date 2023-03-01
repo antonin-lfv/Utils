@@ -2,7 +2,6 @@
 import streamlit as st
 from utils.fonctions import *
 
-
 st.set_page_config(page_icon="🤖",
                    layout="wide",
                    )
@@ -35,7 +34,6 @@ button_delete = st.sidebar.empty()
 st.sidebar.caption("Pour supprimer les données, appuyer deux fois")
 st.sidebar.write("###")
 
-
 # Layout
 if not st.session_state["node_csv_3D"]:
     st.info("La structure s'affichera ici après l'ajout de vos données")
@@ -61,6 +59,22 @@ with col1:
             else:
                 st.session_state["node_csv_3D"].append([index, x_val, y_val, z_val])
                 st.success(f"Le point numéro {index} a été ajouté !")
+    with st.form("Supprimer un point", clear_on_submit=False):
+        st.subheader("Supprimer un point")
+        index = st.number_input("index", min_value=0, step=1)
+
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            if index in [st.session_state["node_csv_3D"][i][0] for i in range(len(st.session_state["node_csv_3D"]))]:
+                # delete all edges with this index as depart or arrivee
+                for i in range(len(st.session_state["edge_csv_3D"])):
+                    if index in st.session_state["edge_csv_3D"][i]:
+                        st.session_state["edge_csv_3D"].remove(st.session_state["edge_csv_3D"][i])
+                st.session_state["node_csv_3D"].remove([index, x_val, y_val, z_val])
+                st.success(f"Le point numéro {index} a été supprimé !")
+                st.write(st.session_state["node_csv_3D"])
+            else:
+                st.error(f"L'index {index} n'existe pas !")
 
 with col2:
     with st.form("Ajouter une arete", clear_on_submit=False):
@@ -79,18 +93,37 @@ with col2:
                     st.error(f"Vous essayez de connecter un point à lui même")
             else:
                 st.error(f"Vous essayez de connecter des points qui ne sont pas créés")
+    with st.form("Supprimer une arete", clear_on_submit=False):
+        st.subheader("Supprimer une arete")
+        point1 = st.number_input("index du premier point", min_value=0, step=1)
+        point2 = st.number_input("index du deuxième point", min_value=0, step=1)
+
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            if [point1, point2] in st.session_state["edge_csv_3D"]:
+                st.session_state["edge_csv_3D"].remove([point1, point2])
+                st.success(f"L'arete entre le point {point1} et {point2} a été supprimée !")
+            else:
+                st.error(f"Vous essayez de supprimer une arete qui n'existe pas")
+
 
 # display graph
-if st.session_state["node_csv_3D"]:
-    node_csv_3D = pd.DataFrame(st.session_state["node_csv_3D"], columns=node_columns)
-    edge_csv_3D = pd.DataFrame(st.session_state["edge_csv_3D"], columns=edge_columns)
-    edges_bool = (st.session_state["edge_csv_3D"] != [])
-    graphe_zone.plotly_chart(graphe_3d(nodes=node_csv_3D, edges=edge_csv_3D, showEdges=edges_bool),
-                             use_container_width=True)
+def display_graphe():
+    if st.session_state["node_csv_3D"]:
+        node_csv_3D = pd.DataFrame(st.session_state["node_csv_3D"], columns=node_columns)
+        edge_csv_3D = pd.DataFrame(st.session_state["edge_csv_3D"], columns=edge_columns)
+        edges_bool = (st.session_state["edge_csv_3D"] != [])
+        graphe_zone.plotly_chart(graphe_3d(nodes=node_csv_3D, edges=edge_csv_3D, showEdges=edges_bool),
+                                 use_container_width=True)
+
+
+display_graphe()
 
 # display data in sidebar
-node_data_show.dataframe(pd.DataFrame(st.session_state["node_csv_3D"], columns=node_columns), use_container_width=True)
-edge_data_show.dataframe(pd.DataFrame(st.session_state["edge_csv_3D"], columns=edge_columns), use_container_width=True)
+node_data_show.dataframe(pd.DataFrame(st.session_state["node_csv_3D"], columns=node_columns),
+                         use_container_width=True)
+edge_data_show.dataframe(pd.DataFrame(st.session_state["edge_csv_3D"], columns=edge_columns),
+                         use_container_width=True)
 
 if st.session_state["node_csv_3D"]:
     button_export_points.download_button(label="Exporter les points en csv",
